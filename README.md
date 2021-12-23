@@ -80,6 +80,7 @@ The main files are :
 WARNING : text_flow.py has been modified a bit from the version of M. Boudina to accept new data sets and perform automatic normalisation of the data. Since the data provided by M. Boudina is already normalised, you might have to change the end of the code to suppress the automatic normalisation when using the data "fixed_cylinder_atRe100".
 - *visualisation_ground_truth.py* : contains script to create plots in order to compare with the model approximation and the ground truth
 - *visualisation_mode_shape.py* : contains script to visualise the mode shapes
+- *forces* : contains a script that plot the approximated forces for one specific job. This could modify to accept any of our files now (we export now also the forces).
 
 ## How to run basic jobs
 
