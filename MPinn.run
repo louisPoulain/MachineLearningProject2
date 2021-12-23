@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=50G
+#SBATCH --job-name=ModalPINN_modalEQ
+#SBATCH --time=0-10:00
+
+module purge
+module load gcc
+module load cuda/10.0.130
+module load cudnn/7.4.2.24-10.0-linux-x64
+source ../venv/bin/activate
+python ./ModalPINN_VortexShedding.py --Tmax 8 --Nmes 5000 --Nint 8000 --multigrid --Ngrid 5 --NgridTurn 200 --WidthLayer 25 --Nmodes 2 --BothEquations --SparseData --DataLocation cylinder_pitot --TwoZonesSampling
+#python ./ModalPINN_VortexShedding.py --Tmax 10 --Nmes 5000 --Nint 8000 --multigrid --Ngrid 5 --NgridTurn 200 --WidthLayer 25 --Nmodes 4 --SparseData --DataLocation cylinder_only # sparse + physical
+#python ./ModalPINN_VortexShedding.py --Tmax 10 --Nmes 5000 --Nint 8000 --multigrid --Ngrid 5 --NgridTurn 200 --WidthLayer 25 --Nmodes 2 --LossModes --SparseData --DataLocation cylinder_only # sparse + modal
+deactivate
