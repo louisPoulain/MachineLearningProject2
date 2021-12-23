@@ -80,7 +80,7 @@ else:
         args.Ur = int(args.Ur)
         Re = str(1.063444e+05)
         
-
+path1 = repertoire + 'ModalPINN_Ur_' + str(args.Ur) + '_Re_' + Re + '_loc_' + args.Location + '_twoZones_' + str(args.TwoZones) + '_sparse_' + str(args.SparseData) + '_' + str(args.Rand)
 path = repertoire + 'ModalPINN_Ur_' + str(args.Ur) + '_Re_' + Re + '_loc_' + args.Location + '_twoZones_' + str(args.TwoZones) + '_sparse_' + str(args.SparseData) + '_' + str(args.Rand) + '/Comparison_history.pickle'
 
 file = open(path,'rb')
@@ -96,7 +96,7 @@ for ind, timestep in enumerate(timesteps):
                            X_comp_v[ind], Y_comp_v[ind], V_comp[ind], fluid_v_comp[ind],
                            X_comp_p[ind], Y_comp_p[ind], P_comp[ind], fluid_p_comp[ind],
                            title = title, title2 = 'Approx of u', title3 = 'Approx of v', title4 = "Approx of p")                       
-    plt.savefig('../Courbes/Comparison_to_ground_truth/' + str(args.Ur) + '_t_'+'{0:.2f}'.format(timestep)+'.png', dpi=200)
+    plt.savefig(path1 + '/Courbes/Comparison_to_ground_truth/' + str(args.Ur) + '_t_'+'{0:.2f}'.format(timestep)+'.png', dpi=200)
     plt.close()
 
 print('\n End !\n')
