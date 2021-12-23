@@ -13,7 +13,7 @@ The code has been updated to work on EPFL clusters and has been modified in orde
 Contact email : louis.poulain-auzeau@epfl.ch _or_ kevin.rizk@epfl.ch
 
 
-# The code has been re-designed to work on EPFL cluster izar with very specific conditions. Please follow precisely this readME
+**The code has been re-designed to work on EPFL cluster izar with very specific conditions. Please follow precisely this readME**
 Note that there are functions to restore the neural network with weights and biases that we have found. This way, if you don't have access to the cluster, you may still be able to see the results.
 
 
@@ -43,7 +43,9 @@ If you don't you can use the command "mv" to move the files as you wish : mv nam
 
 
 ## How to upload the other data sets:
-The other data sets have been uploaded on a drive google. We can provide you access if you ask for it (contact : louis.poulain-auzeau@epfl.ch _or_ kevin.rizk@epfl.ch).
+The other data sets have been uploaded on a drive google. You can find the first folder here: https://drive.google.com/drive/folders/1iOyjurASeyk64mdoAqfKv7jQWvssLNsO?usp=sharing and the second one here: https://drive.google.com/drive/folders/1bok-LbcQJ-XJ1tQISQE3-6v4hBUYPVYA?usp=sharing
+The first folder contains the laminar data sets (low Re) and the other the turbulent data sets (high Re).
+
 If you have access, you can manually download them on your local machine.
 Then : 
 1. open a terminal.
