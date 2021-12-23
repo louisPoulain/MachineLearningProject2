@@ -105,6 +105,7 @@ There are multiple arguments that you can pass to the script, please check the M
 
 
 For each job launched, a folder is created in ./OutputPythonScript_Surrogates and is identified by several informations on the arguments used. In this folder, the content of console prints is saved in *out.txt* including the model itself in a pickle archive. Also lots of data are saved into pickle archives in order to produce plots afterwards.
+There are already lots of jobs that we launch. You can restore the neural network we had using the file DNN2_80_80_4.pickle and the functions in NN_functions.py.
 
 ## Requirements
 
